@@ -22,5 +22,13 @@ export default defineConfig({
       // 设置别名
       '@': path.resolve(__dirname, './src')
     }
+  },
+  // 引入全局scss
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/assets/scss/global.scss";'
+      }
+    }
   }
 })
