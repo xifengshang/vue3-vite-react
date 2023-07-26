@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import layout from './views/layout/index.vue'
+  
 </script>
 
 <template>
   <div class="app-main">
-    <layout></layout>
+    <router-view></router-view>
   </div>
 </template>
 
