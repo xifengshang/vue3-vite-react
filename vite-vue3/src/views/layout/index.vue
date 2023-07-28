@@ -1,7 +1,9 @@
 <template>
   <div class="main-content">
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside width="200px">
+        <Aside></Aside>
+      </el-aside>
       <el-container>
         <el-header>Header</el-header>
         <el-main>
@@ -12,6 +14,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import Aside from './aside.vue'
 </script>
 <style lang="scss">
   .main-content {
