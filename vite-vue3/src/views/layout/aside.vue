@@ -1,7 +1,6 @@
 <template>
   <el-row class="tac">
     <el-col>
-      <h5 class="mb-2">Default colors</h5>
       <el-menu
         default-active="2"
         class="el-menu-vertical-demo"
