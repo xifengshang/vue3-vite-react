@@ -5,7 +5,7 @@
 import axios from 'axios'
 
 const getMusic = () => {
-  axios.get('https://api.apiopen.top/musicRankingsDetails?type=1').then(response => {
+  axios.get('http://openapi.music.163.com/openapi/music/basic/playlist/oftag/get/v2').then(response => {
       console.log(response.data)
     }).catch(error => {
       console.error(error)
