@@ -49,3 +49,35 @@ Obejct.prototype.toString.call({}) // "[object Object]"
 
 constructor
 任何对象都有constructor属性，继承自原型对象，constructor会指向构造这个对象的构造器或者构造函数
+
+## 运算符
+### in
+in运算符用于判断属性是否存在于对象中
+key in obj
+
+### instanceof
+instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置
+target instanceof constructor
+instanceof 可以检测某个对象是否是另一个对象的实例
+```
+const Person = function() {}
+const student = new Person()
+
+student instanceof Person // true
+```
+
+instanceof可以检测父类型
+```
+function Person(){}
+function Student() {}
+
+const p = new Person()
+
+// 继承原型
+Student.prototype = p
+
+const s = new Student()
+
+s instanceof Student // true
+s instanceof Person // true
+```
