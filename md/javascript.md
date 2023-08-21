@@ -81,3 +81,19 @@ const s = new Student()
 s instanceof Student // true
 s instanceof Person // true
 ```
+模拟实现
+```
+function _instanceof(left, right) {
+  if (left === null || (typeof left !== 'object' && typeof left !== 'function')) return false;
+
+  // 递归原型链
+  while (true) {
+    // Object.prototype.__Proto__ === null
+    if (left === null) return false;
+
+    // 当 left 严格等于 prototype 时，返回 true
+    if (left === right.prototype) return true;
+    left = left.__proto__;
+  }
+}
+```
