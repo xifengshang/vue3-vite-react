@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import Button from './components/button'
+import List from './components/list'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const getChild = (e, data) => {
+    console.log(e, data);
+  }
   return (
     <>
       <h1>Vite + React</h1>
+      <List getChild={(e, data) => getChild(e, data)} name={'haha'}></List>
       <Button child="click me" className="h-button"></Button>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
